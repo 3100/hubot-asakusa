@@ -1,0 +1,30 @@
+{
+  "name": "hubot-asakusa",
+  "version": "0.0.1",
+  "author": "Ryo Sato",
+  "keywords": [
+    "github hubot AsakusaSatellite adapter"
+  ],
+  "description": "An AsakusaSatellite adapter for hubot",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/tombell/hubot-twilio/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/3100/hubot-asakusa.git"
+  },
+  "dependencies": {
+    "hubot": ">=2.0.5"
+  },
+  "devDependencies": {
+    "coffee-script": "1.1.3"
+  },
+  "main": "./src/asakusa",
+  "engine": "node > 0.6.0 < 0.7.0",
+  "engines": {
+    "node": "*"
+  }
+}
