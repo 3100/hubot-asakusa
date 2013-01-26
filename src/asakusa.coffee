@@ -7,6 +7,7 @@ WebSocketClient = require('websocket').client
 class Asakusa extends Adapter
  send: (user, strings...) ->
    console.log "Sending strings to user: " + user
+
    @bot.send user, strings
 
  run: ->
@@ -22,7 +23,7 @@ class Asakusa extends Adapter
 
    bot.open options, (data,err) ->
      if data.name != name
-       self.receive new TextMessage data.name, data.body, null
+       self.receive new TextMessage data.name, data.body
 
    @bot = bot
    self.emit 'connected'
@@ -43,7 +44,7 @@ class AsakusaStreaming extends EventEmitter
       throw new Error("Not enough parameters provided.")
 
  send: (user,tweetText,callback) ->
-   @post "#{@api}/message.json", "message=> #{user.user}\n#{tweetText}&room_id=#{@room_id}&api_key=#{@secret}", callback
+   @post "#{@api}/message.json", "message=> #{user}\n#{tweetText}&room_id=#{@room_id}&api_key=#{@secret}", callback
 
  get: (path, callback) ->
    @request "GET", path, null, callback
