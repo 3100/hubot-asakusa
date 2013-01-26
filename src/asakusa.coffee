@@ -13,7 +13,7 @@ class Asakusa extends Adapter
    self = @
    options =
     domain      : process.env.HUBOT_ASAKUSA_DOMAIN
-    room_id      : process.env.HUBOT_ASAKUSA_ROOM_ID
+    room_id     : process.env.HUBOT_ASAKUSA_ROOM_ID
     secret      : process.env.HUBOT_ASAKUSA_SECRET
     ws_url      : process.env.HUBOT_ASAKUSA_WS_URL
    console.log options
