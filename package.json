@@ -28,12 +28,5 @@
   "engine": "node > 0.6.0 < 0.7.0",
   "engines": {
     "node": "*"
-  },
-  "_id": "hubot-asakusa@0.0.1",
-  "readme": "ERROR: No README.md file found!",
-  "dist": {
-    "shasum": "0d445e4f7d618cfb92224e87cf08bc0946636117"
-  },
-  "_from": "https://bitbucket.org/3100/hubot-asakusa/get/master.tar.gz",
-  "_resolved": "https://bitbucket.org/3100/hubot-asakusa/get/master.tar.gz"
+  }
 }
