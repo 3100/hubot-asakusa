@@ -6,7 +6,7 @@ This is an AsakusaSatellite adapter for hubot.
 
 ## Installation and Setup
 
-NOTICE: This bot is for 2.4.6. It only works when you select Socky as your WebSocket server.
+NOTICE: This adapter is for 2.4.6. It only works when you select Socky as your WebSocket server.
 
 * Run `npm install hubot-asakusa --save` in the extracted `Hubot` directory to add the `hubot-asakusa` adapter to your dependencies.
 * Install dependencies with `npm install`
