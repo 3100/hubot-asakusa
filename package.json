@@ -19,7 +19,7 @@
     "url": "git://github.com/3100/hubot-asakusa.git"
   },
   "dependencies": {
-    "hubot": ">=2.4.0",
+    "hubot": ">=2.4.6",
     "websocket": ">=1.0.8"
   },
   "devDependencies": {
