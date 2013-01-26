@@ -19,7 +19,6 @@
     "url": "git://github.com/3100/hubot-asakusa.git"
   },
   "dependencies": {
-    "hubot": ">=2.4.6",
     "websocket": ">=1.0.8"
   },
   "devDependencies": {
@@ -29,5 +28,12 @@
   "engine": "node > 0.6.0 < 0.7.0",
   "engines": {
     "node": "*"
-  }
+  },
+  "_id": "hubot-asakusa@0.0.1",
+  "readme": "ERROR: No README.md file found!",
+  "dist": {
+    "shasum": "6f1339d03660e95f8592ee01fe183ef92c031cd4"
+  },
+  "_from": "https://bitbucket.org/3100/hubot-asakusa/get/master.tar.gz",
+  "_resolved": "https://bitbucket.org/3100/hubot-asakusa/get/master.tar.gz"
 }
