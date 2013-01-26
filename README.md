@@ -25,6 +25,7 @@ You will need to set some environment variables to use this adapter.
 ### Heroku
 
 I do not know if this bot works well with Heroku because you have to set require path to hubot.
+
     % heroku config:add HUBOT_ASAKUSA_DOMAIN="http://localhost/"
     % heroku config:add HUBOT_ASAKUSA_HUBOT="hubot"
     % heroku config:add HUBOT_ASAKUSA_NAME="hu bot"
