@@ -6,7 +6,7 @@ This is an AsakusaSatellite adapter for hubot.
 
 ## Installation and Setup
 
-NOTICE: This adapter is for Hubot v2.4.6. for Hubot v2.3, use v0.0.2. This adapter only works when you select Socky as your WebSocket server.
+NOTICE: To use this adapter, you need Hubot(>= v2.3.0). This adapter only works when you select Socky as your WebSocket server.
 
 * Run `npm install hubot-asakusa --save` in the extracted `Hubot` directory to add the `hubot-asakusa` adapter to your dependencies.
 * Install dependencies with `npm install`
@@ -18,6 +18,10 @@ NOTICE: This adapter is for Hubot v2.4.6. for Hubot v2.3, use v0.0.2. This adapt
       * export HUBOT_ASAKUSA_SECRET="uDEPRjLafZgiiHrxu1Aw"
       * export HUBOT_ASAKUSA_WS_URL="localhost:3002/websocket/as"
       * Run hubot with `bin/hubot -a asakusa`
+* If you use SSL to request to your AsakusaSatellite, set another environment valiable:
+      * export HUBOT_ASAKUSA_SSL="foo"
+* If your Hubot version is v2.3, set below:
+      * export HUBOT_ASAKUSA_V2_3="bar"
 
 ## Usage
 
@@ -43,5 +47,5 @@ I do not know if this bot works well with Heroku because you have to set require
     % export HUBOT_ASAKUSA_WS_URL="localhost:3002/websocket/as"
 
 ## TODO
-* Support older version of Hubot
 * Support Pusher and Keima
+* Enable to use in several rooms

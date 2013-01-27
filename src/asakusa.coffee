@@ -1,6 +1,10 @@
 {Robot, Adapter, TextMessage, EnterMessage, LeaveMessage, Response} = require process.env.HUBOT_ASAKUSA_HUBOT
 
-HTTP = require('http')
+if process.env.HUBOT_ASAKUSA_SSL?
+  HTTP = require 'https'
+else
+  HTTP = require 'http'
+
 EventEmitter = require('events').EventEmitter
 WebSocketClient = require('websocket').client
 
@@ -16,12 +20,17 @@ class Asakusa extends Adapter
     room_id     : process.env.HUBOT_ASAKUSA_ROOM_ID
     secret      : process.env.HUBOT_ASAKUSA_SECRET
     ws_url      : process.env.HUBOT_ASAKUSA_WS_URL
+    is_v2_3     : process.env.HUBOT_ASAKUSA_V2_3?
    console.log options
    bot = new AsakusaStreaming(options)
    name = process.env.HUBOT_ASAKUSA_NAME
 
    bot.open options, (data,err) ->
-     if data.name != name
+     if data.name is name
+       return
+     if @is_v2_3
+       self.receive new TextMessage data.name, data.body
+     else
        self.receive new TextMessage data.name, data.body, null
 
    @bot = bot
@@ -39,11 +48,17 @@ class AsakusaStreaming extends EventEmitter
       @room_id       = options.room_id
       @secret        = options.secret
       @ws_url        = options.ws_url
+      @is_v2_3       = options.is_v2_3
     else
       throw new Error("Not enough parameters provided.")
 
- send: (user,tweetText,callback) ->
-   @post "#{@api}/message.json", "message=> #{user.user}\n#{tweetText}&room_id=#{@room_id}&api_key=#{@secret}", callback
+ send: (user,text,callback) ->
+   if @is_v2_3
+     console.log "v2.3"
+     @post "#{@api}/message.json", "message=> #{user}\n#{text}&room_id=#{@room_id}&api_key=#{@secret}", callback
+   else
+     console.log "v2.4"
+     @post "#{@api}/message.json", "message=> #{user.user}\n#{text}&room_id=#{@room_id}&api_key=#{@secret}", callback
 
  get: (path, callback) ->
    @request "GET", path, null, callback
