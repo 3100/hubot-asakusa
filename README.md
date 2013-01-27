@@ -35,7 +35,7 @@ I do not know if this bot works well with Heroku because you have to set require
     % heroku config:add HUBOT_ASAKUSA_DOMAIN="your.herokuapp.com"
     % heroku config:add HUBOT_ASAKUSA_HUBOT="hubot"
     % heroku config:add HUBOT_ASAKUSA_NAME="hu bot"
-    % heroku config:add HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a"
+    % heroku config:add HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a;50ba5a0432c230424300001a"
     % heroku config:add HUBOT_ASAKUSA_SECRET="uDEPRjLafZgiiHrxu1Aw"
     % heroku config:add HUBOT_ASAKUSA_WS_URL="your.ws.url"
 
@@ -43,7 +43,7 @@ I do not know if this bot works well with Heroku because you have to set require
     % export HUBOT_ASAKUSA_DOMAIN="localhost"
     % export HUBOT_ASAKUSA_HUBOT="/path/to/hubot/"
     % export HUBOT_ASAKUSA_NAME="hu bot"
-    % export HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a"
+    % export HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a;50ba5a0432c230424300001a"
     % export HUBOT_ASAKUSA_SECRET="uDEPRjLafZgiiHrxu1Aw"
     % export HUBOT_ASAKUSA_WS_URL="localhost:3002/websocket/as"
 
