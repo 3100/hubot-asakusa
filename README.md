@@ -14,14 +14,15 @@ NOTICE: To use this adapter, you need Hubot(>= v2.3.0). This adapter only works 
       * export HUBOT_ASAKUSA_DOMAIN="localhost"
       * export HUBOT_ASAKUSA_HUBOT="/path/to/hubot/"
       * export HUBOT_ASAKUSA_NAME="hu bot"
-      * export HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a"
+      * export HUBOT_ASAKUSA_ROOM_ID="50ba5a0422d330235500000a;50ba5a0432c230424300001a"
       * export HUBOT_ASAKUSA_SECRET="uDEPRjLafZgiiHrxu1Aw"
       * export HUBOT_ASAKUSA_WS_URL="localhost:3002/websocket/as"
       * Run hubot with `bin/hubot -a asakusa`
 * If you use SSL to request to your AsakusaSatellite, set another environment valiable:
       * export HUBOT_ASAKUSA_SSL="foo"
-* If your Hubot version is v2.3, set below:
+* If your Hubot version is v2.3:
       * export HUBOT_ASAKUSA_V2_3="bar"
+      * You can set only single room id to HUBOT_ASAKUSA_ROOM_ID
 
 ## Usage
 
@@ -48,4 +49,3 @@ I do not know if this bot works well with Heroku because you have to set require
 
 ## TODO
 * Support Pusher and Keima
-* Enable to use in several rooms
