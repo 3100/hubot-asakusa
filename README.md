@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an AsakusaSatellite adapter for hubot.
+This is an [AsakusaSatellite](https://github.com/codefirst/AsakusaSatellite) adapter for [Hubot](https://github.com/github/hubot).
 
 ## Installation and Setup
 
@@ -30,7 +30,7 @@ You will need to set some environment variables to use this adapter.
 
 ### Heroku
 
-I do not know if this bot works well with Heroku because you have to set require path to hubot.
+I do not know if this adapter works well with Heroku because you have to set require path to hubot.
 
     % heroku config:add HUBOT_ASAKUSA_DOMAIN="your.herokuapp.com"
     % heroku config:add HUBOT_ASAKUSA_HUBOT="hubot"
