@@ -13,6 +13,9 @@ class Asakusa extends Adapter
    console.log "Sending strings to user: " + user
    @bot.send user, strings
 
+ reply: (user, strings...) ->
+   @send user, strings
+
  run: ->
    self = @
    options =
@@ -54,9 +57,12 @@ class AsakusaStreaming extends EventEmitter
 
  send: (user,text,callback) ->
    if @is_v2_3
-     @post "#{@api}/message.json", "message=> #{user}\n#{text}&room_id=#{@room_ids[0]}&api_key=#{@secret}", callback
+     message = encodeURIComponent "> #{user}\n#{text}"
+     room_id = @room_ids[0]
    else
-     @post "#{@api}/message.json", "message=> #{user.user}\n#{text}&room_id=#{user.message.id}&api_key=#{@secret}", callback
+     message = encodeURIComponent "> #{user.user}\n#{text}"
+     room_id = user.message.id
+   @post "#{@api}/message.json", "message=#{message}&room_id=#{room_id}&api_key=#{@secret}", callback
 
  get: (path, callback) ->
    @request "GET", path, null, callback
